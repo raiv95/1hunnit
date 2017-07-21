@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.varun.a4inarow.MainActivity"
+    android:background="#808080">
+
+    <TableLayout
+        android:id="@+id/board"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#1200e2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:weightSum="7">
+
+            <Button android:id="@+id/circle1" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle2" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle3" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle4" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle5" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle6" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle7" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:weightSum="7">
+
+            <Button android:id="@+id/circle8" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle9" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle10" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle11" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle12" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle13" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle14" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:weightSum="7">
+
+            <Button android:id="@+id/circle15" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle16" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle17" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle18" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle19" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle20" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle21" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:weightSum="7">
+
+            <Button android:id="@+id/circle22" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle23" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle24" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle25" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle26" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle27" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle28" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:weightSum="7">
+
+            <Button android:id="@+id/circle29" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle30" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle31" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle32" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle33" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle34" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle35" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:weightSum="7">
+
+            <Button android:id="@+id/circle36" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle37" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle38" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle39" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle40" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle41" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+            <Button android:id="@+id/circle42" style="?android:attr/buttonBarButtonStyle" android:background="@drawable/circle" android:layout_weight="1" android:onClick="buttonClicked" android:layout_margin="2dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

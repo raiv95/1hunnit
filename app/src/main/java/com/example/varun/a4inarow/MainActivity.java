@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     int gameBoard[][];
@@ -82,5 +83,32 @@ public class MainActivity extends AppCompatActivity {
                 board.setPlayers(player);
             }
         }
+        // code for checking winners goes below
+        int status = checkBoardStatus();
+        if (status == 1) {
+            Toast.makeText(getApplicationContext(), "Player 1 Wins!", Toast.LENGTH_LONG).show();
+            board.initializeBoard();
+        } else if (status == 2) {
+            Toast.makeText(getApplicationContext(), "Player 2 Wins!", Toast.LENGTH_LONG).show();
+            board.initializeBoard();
+            setContentView(R.layout.activity_main);
+        }
+
+        // reset the board if full
+        if (board.fullBoard()) {
+            Toast.makeText(getApplicationContext(), "Full board reinitialized", Toast.LENGTH_LONG).show();
+            board.initializeBoard();
+            setContentView(R.layout.activity_main);
+        }
     }
+
+    public int checkBoardStatus() {
+        int vert;
+
+        if ((vert = board.verticalWinner()) > 0) {
+            return vert;
+        }
+        return 0;
+    }
+
 }

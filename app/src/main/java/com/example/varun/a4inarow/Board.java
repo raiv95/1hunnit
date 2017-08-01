@@ -49,4 +49,57 @@ class Board {
 
     public void setGameBoard(int[][] a) { gameBoard = a; }
 
+    public boolean fullBoard() {
+        int emptyCircles = 0;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                if (gameBoard[i][j] == 0) {
+                    emptyCircles++;
+                }
+            }
+        }
+        if (emptyCircles == 0) { return true; }
+        else { return false;}
+    }
+
+    public void initializeBoard() {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                gameBoard[i][j] = 0;
+            }
+        }
+    }
+
+
+    public int verticalWinner() {
+        int count1, count2, winner = 0;
+        int previous;
+        for (int i = 0; i < 7; i++) {
+            count1 = 0;
+            count2 = 0;
+            previous = gameBoard[5][i];
+            for (int j = 5; j >= 0; j--) {
+                // player 1 and player 2
+                if (gameBoard[j][i] == 1) {
+                    if (previous == 1 || (previous != 1 && count1 == 0)) {
+                        count1++;
+                        count2 = 0;
+                    }
+                } else if (gameBoard[j][i] == 2) {
+                    if (previous == 2 || (previous != 2 && count2 == 0)) {
+                        count2++;
+                        count1 = 0;
+                    }
+                }
+                previous = gameBoard[j][i];
+                if (count1 >= 4) {
+                    winner = 1;
+                }
+                if (count2 >= 4) {
+                    winner = 2;
+                }
+            }
+        }
+        return winner;
+    }
 }

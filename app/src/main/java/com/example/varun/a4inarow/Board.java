@@ -7,13 +7,13 @@ package com.example.varun.a4inarow;
 class Board {
 
     private int player;
-    private String[][] colorBoard = new String[][] {
-            {"grey","grey","grey","grey","grey","grey","grey"},
-            {"grey","grey","grey","grey","grey","grey","grey"},
-            {"grey","grey","grey","grey","grey","grey","grey"},
-            {"grey","grey","grey","grey","grey","grey","grey"},
-            {"grey","grey","grey","grey","grey","grey","grey"},
-            {"grey","grey","grey","grey","grey","grey","grey"}
+    private int[][] gameBoard = new int[][] {
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0}
     };
 
     private int positionBoard[][] = new int[][] {
@@ -33,17 +33,20 @@ class Board {
         return player;
     }
 
-    public void setPlayer(int currentPlayer) {
+    public void setPlayers(int currentPlayer) {
         if (currentPlayer == 1) { player = 2; }
         if (currentPlayer == 2) { player = 1; }
     }
 
 
-    public String[][] getColorBoard() {
-        return colorBoard;
+    public int[][] getGameBoard() {
+        return gameBoard;
     }
 
     public int[][] getPositionBoard() {
         return positionBoard;
     }
+
+    public void setGameBoard(int[][] a) { gameBoard = a; }
+
 }

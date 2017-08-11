@@ -134,4 +134,77 @@ class Board {
         }
         return winner;
     }
+
+    public int diagonalWinner1() {
+        // two separate bodies for checking diagonals
+        // first diagonal check
+        int count1, count2, winner = 0, previous;
+        // first half of the board
+        for (int i = 0; i < 6; i++) {
+            count1 = 0;
+            count2 = 0;
+            int j = i, k = 0;
+            previous = gameBoard[i][0];
+            while (j >= 0) {
+                if (gameBoard[j][k] == 1) {
+                    if (previous == 1 || (previous != 1 && count1 == 0)) {
+                        count1++;
+                        count2 = 0;
+                    }
+                }
+
+                if (gameBoard[j][k] == 2) {
+                    if (previous == 2 || (previous != 2 && count2 == 0)) {
+                        count2++;
+                        count1 = 0;
+                    }
+                }
+                previous = gameBoard[j][k];
+                j--;
+                k++;
+                if (count1 >= 4) {
+                    winner = 1;
+                }
+                if (count2 >= 4) {
+                    winner = 2;
+                }
+            }
+        }
+
+        // second half of the board
+        if (winner == 0) {
+            for (int i = 1; i < 7; i++) {
+                count1 = 0;
+                count2 = 0;
+                previous = gameBoard[5][i];
+                int j = 5, k = i;
+                while (k < 7) {
+                    if (gameBoard[j][k] == 1) {
+                        if (previous == 1 || (previous != 1 && count1 == 0)) {
+                            count1++;
+                            count2 = 0;
+                        }
+                    }
+
+                    if (gameBoard[j][k] == 2) {
+                        if (previous == 2 || (previous != 2 && count2 == 0)) {
+                            count2++;
+                            count1 = 0;
+                        }
+                    }
+                    previous = gameBoard[j][k];
+                    j--;
+                    k++;
+                    if (count1 >= 4) {
+                        winner = 1;
+                    }
+                    if (count2 >= 4) {
+                        winner = 2;
+                    }
+                }
+            }
+        }
+
+        return winner;
+    }
 }

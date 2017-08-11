@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         if (status == 1) {
             Toast.makeText(getApplicationContext(), "Player 1 Wins!", Toast.LENGTH_LONG).show();
             board.initializeBoard();
+            setContentView(R.layout.activity_main);
         } else if (status == 2) {
             Toast.makeText(getApplicationContext(), "Player 2 Wins!", Toast.LENGTH_LONG).show();
             board.initializeBoard();
@@ -103,10 +104,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int checkBoardStatus() {
-        int vert;
+        int vert, horiz;
 
         if ((vert = board.verticalWinner()) > 0) {
             return vert;
+        }
+
+        if ((horiz = board.horizontalWinner()) > 0) {
+            return horiz;
         }
         return 0;
     }

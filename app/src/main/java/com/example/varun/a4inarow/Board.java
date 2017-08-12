@@ -207,4 +207,75 @@ class Board {
 
         return winner;
     }
+
+    public int diagonalWinner2() {
+        int count1, count2, winner = 0, previous;
+
+        for (int i = 0; i < 6; i++) {
+            count1 = 0;
+            count2 = 0;
+            previous = gameBoard[i][6];
+            int j = i, k = 6;
+            while (j >= 0) {
+                if (gameBoard[j][k] == 1) {
+                    if (previous == 1 || (previous != 1 && count1 == 0)) {
+                        count1++;
+                        count2 = 0;
+                    }
+                }
+
+                if (gameBoard[j][k] == 2) {
+                    if (previous == 2 || (previous != 2 && count2 == 0)) {
+                        count2++;
+                        count1 = 0;
+                    }
+                }
+                previous = gameBoard[j][k];
+                j--;
+                k--;
+                if (count1 >= 4) {
+                    winner = 1;
+                }
+                if (count2 >= 4) {
+                    winner = 2;
+                }
+            }
+        }
+
+        // second half of board
+        if (winner == 0) {
+            for (int i = 5; i >= 0; i--) {
+                count1 = 0;
+                count2 = 0;
+                previous = gameBoard[5][i];
+                int j = 5, k = i;
+                while (k >= 0) {
+                    if (gameBoard[j][k] == 1) {
+                        if (previous == 1 || (previous != 1 && count1 == 0)) {
+                            count1++;
+                            count2 = 0;
+                        }
+                    }
+
+                    if (gameBoard[j][k] == 2) {
+                        if (previous == 2 || (previous != 2 && count2 == 0)) {
+                            count2++;
+                            count1 = 0;
+                        }
+                    }
+                    previous = gameBoard[j][k];
+                    j--;
+                    k--;
+                    if (count1 >= 4) {
+                        winner = 1;
+                    }
+                    if (count2 >= 4) {
+                        winner = 2;
+                    }
+                }
+            }
+        }
+
+        return winner;
+    }
 }

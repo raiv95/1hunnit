@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // returns 1 or 2 for players, or 0 if no winner was found
     public int checkBoardStatus() {
-        int vert, horiz, diag1;
+        int vert, horiz, diag1, diag2;
 
         if ((vert = board.verticalWinner()) > 0) {
             return vert;
@@ -116,6 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
         if ((diag1 = board.diagonalWinner1()) > 0) {
             return diag1;
+        }
+
+        if ((diag2 = board.diagonalWinner2()) > 0) {
+            return diag2;
         }
         return 0;
     }
